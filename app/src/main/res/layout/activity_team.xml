@@ -5,19 +5,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:theme="@style/BlitzThem"
     android:layout_height="match_parent"
     tools:context=".TeamActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbarll"
         android:layout_width="match_parent"
-        android:layout_height="146.5dp"
-
+        android:layout_height="156dp"
         android:background="@drawable/maintabback"
         android:theme="@style/Theme.Blitzcric.AppBarOverlay"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardElevation="5dp"
+
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/maintabback"
+                />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,7 +38,7 @@
                 android:id="@+id/country_img_pak"
                 android:layout_width="64dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="25dp"
                 android:background="@drawable/mminidanback"
                 android:paddingTop="1.5dp"
                 android:paddingBottom="1.5dp"
@@ -40,7 +51,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="32dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toTopOf="@+id/tabs"
                 app:layout_constraintEnd_toStartOf="@+id/country_img_newz"
@@ -87,7 +98,7 @@
                 android:id="@+id/country_img_newz"
                 android:layout_width="64dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="25dp"
                 android:background="@drawable/pubjabback"
                 android:paddingTop="1.5dp"
                 android:paddingBottom="1.5dp"
@@ -114,6 +125,8 @@
                 app:tabTextColor="#80000000" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -138,7 +151,7 @@ android:background="@drawable/mainscreenback"
             android:id="@+id/tabLayout1"
             android:layout_width="match_parent"
             android:layout_height="29dp"
-            android:layout_marginHorizontal="8dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/tab_corner_big"
             app:layout_constraintEnd_toEndOf="parent"
@@ -163,6 +176,9 @@ app:tabTextAppearance="@style/MyCustomTextAppearanceSelectedmain"
             android:id="@+id/rv_main"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginHorizontal="16dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:listitem="@layout/rv_item"

@@ -1,6 +1,8 @@
 package com.mesum.blitzcric
 
+import android.graphics.Color
 import android.graphics.Typeface
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +27,11 @@ class TeamActivity : AppCompatActivity() {
         binding = ActivityTeamBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+// Make the status bar transparent
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            window.statusBarColor = Color.TRANSPARENT
+        }
 
 
         val poppinsMedium = ResourcesCompat.getFont(this, com.mesum.blitzcric.R.font.poppins_medium)
@@ -111,7 +118,7 @@ class TeamActivity : AppCompatActivity() {
         mutablelist.add(8, CricketPlayer(resources.getDrawable(R.drawable.baltej), name = "Baltej Singh",
             type = "Allrounder , Right Handed Bat"))
 
-        val adapter = PlayerAdapter(mutablelist)
+        val adapter = PlayerAdapter(mutablelist, context = this)
         binding.rvMain.adapter = adapter
 
     }

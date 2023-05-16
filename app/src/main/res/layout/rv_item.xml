@@ -39,7 +39,6 @@
             android:layout_width="53.6dp"
             android:layout_height="53.6dp"
             android:layout_gravity="center_horizontal|center_vertical"
-
             android:src="@drawable/rohitsharma"
             />
 
@@ -89,8 +88,8 @@
         android:id="@+id/viewdn"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/linemain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
