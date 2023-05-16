@@ -76,5 +76,11 @@ class TeamActivity : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
 
 
+        val mainpager = PagerMain(this, supportFragmentManager)
+        val viewPager2: ViewPager = binding.viewPage2r
+        viewPager2.adapter = mainpager
+        findViewById<TabLayout>(R.id.tabLayout1).setupWithViewPager(viewPager2)
+
+
     }
 }

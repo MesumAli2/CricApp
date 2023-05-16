@@ -134,6 +134,35 @@ android:background="@drawable/mainscreenback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/tab_corner_big"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+app:tabTextAppearance="@style/MyCustomTextAppearanceSelectedmain"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabGravity="fill"
+            app:tabIndicator="@drawable/tab_indicator_corner_bg"
+            app:tabIndicatorColor="#cd1b22"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="28dp"
+            app:tabMaxWidth="0dp"
+            app:tabSelectedTextAppearance="@style/MyCustomTextAppearance"
+            app:tabMinWidth="112dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="#979797" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_page2r"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
