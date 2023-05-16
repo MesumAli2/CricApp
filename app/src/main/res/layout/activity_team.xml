@@ -17,17 +17,44 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/country_img_pak"
+                android:layout_width="64dp"
+                android:layout_height="55dp"
+                android:background="@drawable/mminidanback"
+                android:paddingTop="1.5dp"
+                android:paddingBottom="1.5dp"
+                android:src="@drawable/mmindian"
+                app:layout_constraintBottom_toTopOf="@+id/tabs"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+
+            <ImageView
+                android:id="@+id/country_img_newz"
+                android:layout_width="64dp"
+                android:layout_height="55dp"
+
+                android:background="@drawable/pubjabback"
+                android:paddingTop="1.5dp"
+                android:paddingBottom="1.5dp"
+                android:src="@drawable/pubjabkings"
+                app:layout_constraintBottom_toTopOf="@+id/tabs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         <com.google.android.material.tabs.TabLayout
+
             android:id="@+id/tabs"
             app:tabMode="scrollable"
+            app:tabIndicatorHeight="3.5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:background="@android:color/transparent"
             app:tabIndicatorColor="@color/white"
-
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            app:tabSelectedTextAppearance="@style/MyCustomTextAppearanceSelected"
             app:tabSelectedTextColor="@color/white"
             app:tabTextColor="#80000000"
             android:layout_width="match_parent"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code for drawable -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Main rectangle shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <!-- Right rounded shape with gradient colors -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:topRightRadius="50dp" android:bottomRightRadius="50dp" />
+            <gradient
+                android:type="linear"
+                android:startColor="#ffffff"
+                android:endColor="#0062a3"
+                android:angle="180" />
+        </shape>
+    </item>
+</layer-list>
