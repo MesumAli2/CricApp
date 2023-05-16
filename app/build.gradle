@@ -50,6 +50,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-livedata:2.6.1'
 
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
 }

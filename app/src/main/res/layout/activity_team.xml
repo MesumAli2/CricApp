@@ -145,6 +145,7 @@ android:background="@drawable/mainscreenback"
             app:layout_constraintStart_toStartOf="parent"
 app:tabTextAppearance="@style/MyCustomTextAppearanceSelectedmain"
 
+
             app:layout_constraintTop_toTopOf="parent"
             app:tabGravity="fill"
             app:tabIndicator="@drawable/tab_indicator_corner_bg"
@@ -152,11 +153,22 @@ app:tabTextAppearance="@style/MyCustomTextAppearanceSelectedmain"
             app:tabIndicatorFullWidth="true"
             app:tabIndicatorHeight="28dp"
             app:tabMaxWidth="0dp"
-            app:tabSelectedTextAppearance="@style/MyCustomTextAppearance"
+            app:tabSelectedTextAppearance="@style/MyCustomTextAppearanceSelectedmain"
             app:tabMinWidth="112dp"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/white"
             app:tabTextColor="#979797" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/rv_item"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout1" />
+
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_page2r"

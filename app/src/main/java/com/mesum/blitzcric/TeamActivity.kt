@@ -1,14 +1,11 @@
 package com.mesum.blitzcric
 
 import android.graphics.Typeface
-import android.graphics.fonts.Font
 import android.os.Bundle
-import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.viewpager.widget.ViewPager
@@ -80,7 +77,42 @@ class TeamActivity : AppCompatActivity() {
         val viewPager2: ViewPager = binding.viewPage2r
         viewPager2.adapter = mainpager
         findViewById<TabLayout>(R.id.tabLayout1).setupWithViewPager(viewPager2)
+        createList()
 
+    }
+
+
+    fun createList(){
+
+        val mutablelist = mutableListOf<CricketPlayer>()
+        mutablelist.add(0, CricketPlayer(resources.getDrawable(R.drawable.rohitsharma), name = "Shikhar Dhawan (c)",
+        type = "Batsman , Left Handed Bat"))
+        mutablelist.add(1, CricketPlayer(resources.getDrawable(R.drawable.liam), name = "Liam Livingstone",
+            type = "Batsman , Right Handed Bat"))
+        mutablelist.add(2, CricketPlayer(resources.getDrawable(R.drawable.athavara), name = "Atharva Taide",
+            type = "Batsman , Left Handed Bat"))
+        mutablelist.add(3, CricketPlayer(resources.getDrawable(R.drawable.raza), name = "Sikandar Raza",
+            type = "Allrounder , Right Handed Bat"))
+        mutablelist.add(4, CricketPlayer(resources.getDrawable(R.drawable.sharukh), name = "Shahrukh Khan" ,
+            type = "Batsman , Right Handed Bat"))
+
+        mutablelist.add(5, CricketPlayer(resources.getDrawable(R.drawable.harpeet), name = "Harpreet Brar",
+            type = "Allrounder , Right Handed Bat"))
+
+        mutablelist.add(6, CricketPlayer(resources.getDrawable(R.drawable.sam), name = "Sam Curran",
+            type = "Allrounder , Left Handed Bat"))
+
+        mutablelist.add(7, CricketPlayer(resources.getDrawable(R.drawable.rishi), name = "Rishi Dhawan",
+            type = "Allrounder , Right Handed Bat"))
+
+        mutablelist.add(8, CricketPlayer(resources.getDrawable(R.drawable.baltej), name = "Baltej Singh",
+            type = "Allrounder , Right Handed Bat"))
+
+        mutablelist.add(8, CricketPlayer(resources.getDrawable(R.drawable.baltej), name = "Baltej Singh",
+            type = "Allrounder , Right Handed Bat"))
+
+        val adapter = PlayerAdapter(mutablelist)
+        binding.rvMain.adapter = adapter
 
     }
 }
