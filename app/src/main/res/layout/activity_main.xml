@@ -63,6 +63,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <LinearLayout
+                android:id="@+id/pak_ll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -95,7 +96,19 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </LinearLayout>
 
+
+            <com.mesum.blitzcric.HexagonImageView
+                android:id="@+id/hexagonImageView"
+                android:layout_width="54dp"
+                android:layout_height="56dp"
+                android:background="@drawable/outer"
+                android:src="@drawable/getty"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/nz_lll"
+                app:layout_constraintStart_toEndOf="@+id/pak_ll"
+                app:layout_constraintTop_toTopOf="parent" />
             <LinearLayout
+                android:id="@+id/nz_lll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -170,12 +183,13 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:background="#2d3477"
-                app:layout_constraintBottom_toBottomOf="parent">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/textView2"
@@ -185,28 +199,28 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_bold_italic"
                     android:gravity="center_horizontal|center_vertical"
+                    android:text="NZ WON BY 6 WICKETS"
                     android:textColor="#ffffff"
                     android:textSize="10sp"
                     android:textStyle="bold|italic"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="NZ WON BY 6 WICKETS" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <TextView
                     android:id="@+id/points_table"
                     android:layout_width="66dp"
                     android:layout_height="15dp"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="55dp"
                     android:fontFamily="@font/poppins_italic"
+                    android:text="POINTS TABLE"
                     android:textColor="#ffffff"
                     android:textSize="10sp"
                     android:textStyle="italic"
-                    android:text="POINTS TABLE"
-                    android:layout_marginVertical="8dp"
-                    android:layout_marginStart="55dp"
-                    app:layout_constraintEnd_toStartOf="@id/arrow"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/arrow"
                     app:layout_constraintStart_toEndOf="@+id/textView2"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="POINTS TABLE" />
@@ -215,27 +229,26 @@
                     android:id="@+id/arrow"
                     android:layout_width="20dp"
                     android:layout_height="12dp"
-                    android:src="@drawable/path"
                     android:layout_marginStart="-4dp"
+                    android:src="@drawable/path"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/points_table"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
 
                 <TextView
                     android:id="@+id/score_table"
                     android:layout_width="wrap_content"
                     android:layout_height="15dp"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="38dp"
                     android:fontFamily="@font/poppins_italic"
+                    android:text="SCORE CARD"
                     android:textColor="#ffffff"
                     android:textSize="10sp"
-                    android:text="SCORE CARD"
                     android:textStyle="italic"
-                    android:layout_marginVertical="8dp"
-                    app:layout_constraintEnd_toStartOf="@id/arrow2"
-                    android:layout_marginStart="38dp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/arrow2"
                     app:layout_constraintStart_toEndOf="@+id/points_table"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="SCORE CARD
@@ -246,8 +259,8 @@
                     android:layout_width="20dp"
                     android:layout_height="12dp"
                     android:layout_marginStart="-4dp"
-                    android:src="@drawable/path"
                     android:layout_marginEnd="10dp"
+                    android:src="@drawable/path"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/score_table"
