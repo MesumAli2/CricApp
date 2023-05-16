@@ -26,14 +26,14 @@
             <TextView
                 android:id="@+id/main_match_tx"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/poppins_medium_italic"
                 android:text="T20 New Zealand four Pakistan 2023"
-                android:textSize="12sp"
 
 
-                android:layout_marginTop="5dp"
                 android:textColor="#464646"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +41,7 @@
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="16dp"
                 android:fontFamily="@font/poppins_light_italic"
                 android:text="5th March, Lahore Pakistan"
                 android:textColor="#464646"
@@ -52,7 +52,7 @@
 
 
             <ImageView
-                android:id="@+id/country_img"
+                android:id="@+id/country_img_pak"
                 android:layout_width="64dp"
                 android:layout_height="55dp"
                 android:paddingTop="1.5dp"
@@ -60,8 +60,205 @@
                 android:background="@drawable/country_icon"
                 android:src="@drawable/flag_of_pakistan_svg"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"></ImageView>
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="47dp"
+                app:layout_constraintStart_toEndOf="@+id/country_img_pak"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:fontFamily="@font/poppins_bold_italic"
+                android:text="PAK"
+                android:gravity="center_horizontal"
+                android:textColor="#2e6f3a"
+                android:textSize="18sp"
+/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_italic"
+                    android:text="193-5/20
+"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#464646"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/country_img_pak"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="38dp"
+                app:layout_constraintEnd_toStartOf="@+id/country_img_newz"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:fontFamily="@font/poppins_bold_italic"
+                    android:text="NZL"
+                    android:textStyle="italic"
+                    android:layout_gravity="end"
+                    android:gravity="center_horizontal"
+                    android:textColor="#2e3578"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:fontFamily="@font/poppins_italic"
+                    android:text="193-5/20"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="end"
+                    android:textColor="#464646"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toEndOf="@+id/country_img_pak"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:fontFamily="@font/poppins_semibold_italic"
+                    android:text="M. CHAPLAN"
+                    android:textColor="#464646"
+                    android:textStyle="italic"
+                    android:textSize="10sp"
+                    android:layout_gravity="end"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/country_img_pak"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="11dp"
+                    android:textStyle="italic"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_light_italic"
+                    android:textColor="#464646"
+                    android:gravity="center_horizontal"
+                    android:text="MAN OF THE MATCH"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/country_img_newz"
+                android:layout_width="64dp"
+                android:layout_height="55dp"
+
+                android:paddingTop="1.5dp"
+                android:paddingBottom="1.5dp"
+                android:background="@drawable/country_nz"
+                android:src="@drawable/group_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="#2d3477"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="114dp"
+                    android:layout_height="15dp"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_bold_italic"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="NZ WON BY 6 WICKETS" />
+
+
+                <TextView
+                    android:id="@+id/points_table"
+                    android:layout_width="66dp"
+                    android:layout_height="15dp"
+                    android:fontFamily="@font/poppins_italic"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    android:textStyle="italic"
+                    android:text="POINTS TABLE"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginStart="55dp"
+                    app:layout_constraintEnd_toStartOf="@id/arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="POINTS TABLE" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="20dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/path"
+                    android:layout_marginStart="-4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/points_table"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                <TextView
+                    android:id="@+id/score_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:fontFamily="@font/poppins_italic"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp"
+                    android:text="SCORE CARD"
+                    android:textStyle="italic"
+                    android:layout_marginVertical="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/arrow2"
+                    android:layout_marginStart="38dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/points_table"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="SCORE CARD
+" />
+
+                <ImageView
+                    android:id="@+id/arrow2"
+                    android:layout_width="20dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="-4dp"
+                    android:src="@drawable/path"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/score_table"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 
