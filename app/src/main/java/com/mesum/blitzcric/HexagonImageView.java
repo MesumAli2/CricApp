@@ -1,5 +1,6 @@
 package com.mesum.blitzcric;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Path;
@@ -51,7 +52,7 @@ public class HexagonImageView extends AppCompatImageView {
 
         // Set up outer background paint
         outerPaint = new Paint();
-        outerPaint.setColor(R.color.hexagonouter); // Change the color as needed
+        outerPaint.setColor(R.color.hexagoninner); // Change the color as needed
         outerPaint.setStyle(Paint.Style.FILL);
 
         // Set up inner background paint
@@ -76,6 +77,7 @@ public class HexagonImageView extends AppCompatImageView {
 
 
 
+    @SuppressLint("DrawAllocation")
     @Override
     protected void onDraw(Canvas canvas) {
         hexagonPath.reset();
@@ -94,8 +96,30 @@ public class HexagonImageView extends AppCompatImageView {
         }
         hexagonPath.close();
 
-        // Draw outer background color in the hexagon shape
-        canvas.drawPath(hexagonPath, outerPaint);
+        // Rotate the canvas
+        canvas.rotate(4, centerX, centerY);
+
+        // Calculate outer rectangle as a thin line
+        float lineThickness = radius * 0.01f; // Adjust the line thickness as needed
+        outerRect = new RectF(
+                centerX - radius + lineThickness,
+                centerY - radius + lineThickness,
+                centerX + radius - lineThickness,
+                centerY + radius - lineThickness
+        );
+
+        // Calculate inner rectangle with padding
+        float padding = 0f; // Adjust the padding factor as needed
+        innerRect = new RectF(
+                outerRect.left - padding ,
+                outerRect.top - padding,
+                outerRect.height()  + padding
+                ,
+                outerRect.width() + padding
+        );
+
+        // Draw outer background line
+        canvas.drawPath(hexagonPath, innerPaint);
 
         // Clip the canvas with the hexagon path
         canvas.clipPath(hexagonPath);
@@ -105,6 +129,11 @@ public class HexagonImageView extends AppCompatImageView {
 
         super.onDraw(canvas);
     }
+
+
+
+
+
 
 
 }
