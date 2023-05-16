@@ -13,4 +13,13 @@
         <item name="android:statusBarColor">#393939</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Blitzcric.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Blitzcric.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Blitzcric.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -10,11 +10,12 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/main_card"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginBottom="150dp"
         app:cardCornerRadius="6dp"
-        android:layout_marginHorizontal="18dp"
+        android:layout_marginHorizontal="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,20 +97,73 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </LinearLayout>
 
+            <View
+                android:id="@+id/view"
+                android:layout_width="95dp"
 
-            <com.mesum.blitzcric.HexagonImageView
-                android:id="@+id/hexagonImageView"
-                android:layout_width="53.5dp"
-                android:layout_height="57.9dp"
-                android:rotation="4"
-                android:padding="2.5dp"
-                android:scaleType="centerInside"
-                android:cropToPadding="true"
-                android:background="@drawable/outer"
-                android:src="@drawable/getty"
+                android:layout_height="1dp"
+                android:layout_marginBottom="-1dp"
+                android:background="@drawable/line"
+                app:layout_constraintBottom_toTopOf="@+id/linecn"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/linecn" />
+
+
+            <View
+                android:id="@+id/linecn"
+                android:layout_width="1dp"
+                android:layout_height="8dp"
+
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="-2dp"
+                android:background="@drawable/linecn"
+                app:layout_constraintBottom_toTopOf="@+id/main_img_ll"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/main_img_ll" />
+
+            <LinearLayout
+                android:id="@+id/main_img_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/nz_lll"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <com.mesum.blitzcric.HexagonImageView
+                    android:id="@+id/hexagonImageView"
+                    android:layout_width="53.5dp"
+                    android:layout_height="57.9dp"
+                    android:rotation="4"
+                    android:padding="2.5dp"
+                    android:scaleType="centerInside"
+                    android:cropToPadding="true"
+                    android:background="@drawable/outer"
+                    android:src="@drawable/getty"
+                    />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/linecndn"
+                android:layout_width="1dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/linecndn"
+                app:layout_constraintTop_toBottomOf="@id/main_img_ll"
+          app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/main_img_ll" />
+
+            <View
+                android:id="@+id/viewdn"
+                android:layout_width="177dp"
+android:layout_marginTop="-3dp"
+                android:layout_height="1dp"
+                android:background="@drawable/linednpng"
+                app:layout_constraintTop_toBottomOf="@+id/linecndn"
+                app:layout_constraintStart_toStartOf="@+id/linecndn" />
+
             <LinearLayout
                 android:id="@+id/nz_lll"
                 android:layout_width="wrap_content"
