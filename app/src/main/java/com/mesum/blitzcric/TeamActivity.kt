@@ -1,15 +1,17 @@
 package com.mesum.blitzcric
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
-import com.mesum.blitzcric.ui.main.SectionsPagerAdapter
+import androidx.core.content.res.ResourcesCompat
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.mesum.blitzcric.databinding.ActivityTeamBinding
+import com.mesum.blitzcric.ui.main.SectionsPagerAdapter
+
 
 class TeamActivity : AppCompatActivity() {
 
@@ -24,8 +26,40 @@ class TeamActivity : AppCompatActivity() {
         val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
         val viewPager: ViewPager = binding.viewPager
         viewPager.adapter = sectionsPagerAdapter
-        val tabs: TabLayout = binding.tabs
-        tabs.setupWithViewPager(viewPager)
+
+        val poppinsMedium = ResourcesCompat.getFont(this, com.mesum.blitzcric.R.font.poppins_medium)
+        val poppinsLight = ResourcesCompat.getFont(this, com.mesum.blitzcric.R.font.poppins_light)
+        val tabLayout = binding.tabs
+
+
+
+
+
+
+
+
+
+        tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                val tabLayout =
+                    (tabLayout.getChildAt(0) as ViewGroup).getChildAt(tab.position) as LinearLayout
+                val tabTextView = tabLayout.getChildAt(1) as TextView
+                tabTextView.setTypeface(poppinsMedium)
+
+
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+                val tabLayout =
+                    (tabLayout.getChildAt(0) as ViewGroup).getChildAt(tab.position) as LinearLayout
+                val tabTextView = tabLayout.getChildAt(1) as TextView
+                tabTextView.setTypeface(poppinsLight)
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab) {
+            }
+        })
+        tabLayout.setupWithViewPager(viewPager)
 
 
     }
